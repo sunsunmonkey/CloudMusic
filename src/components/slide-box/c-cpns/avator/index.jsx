@@ -4,13 +4,20 @@ import rightArrow from '../../../../assets/images/rightArrow.png'
 import code from '../../../../assets/images/code.png'
 import userimg from '../../../../assets/images/userimg.png'
 import { useNavigate } from 'react-router-dom'
+import { loginToken } from '../../../../utils/loginToken'
 const Avator = memo((props) => {
   const  navigate= useNavigate()
+  const token = loginToken()
   return (
     <AvatorWrapper>
       <div className="content">
         <div className="avator_contain" onClick={()=>{
+          if(token){
             navigate('/user')
+          }else{
+            navigate('/login')
+          }
+            
         }}>
         <div className="avator">
             <img src={userimg} alt="" />

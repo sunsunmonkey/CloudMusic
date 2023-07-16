@@ -1,9 +1,11 @@
-import {  useRef, useState } from "react"
+import {  useEffect, useRef, useState } from "react"
 import SliderBox from "../../components/slide-box"
 import '../../assets/css/reset.css'
 import { HomeWrapper } from "./style"
 import React from "react"
 import { pxTransferVW, vwTransferPX } from "../../utils/pxAndVW"
+import { loginToken } from "../../utils/loginToken"
+import { selfInfo } from "../../services/modules/login"
 
 function Home() {
 
@@ -12,7 +14,12 @@ function Home() {
   const [transition , setTransition] = useState('none')
   const positonStart = useRef(0)
   const positonEnd = useRef(0)
-
+  const cookie = loginToken()
+  useEffect(()=>{
+     selfInfo(cookie)
+  
+  
+  },[cookie])
 
   function handleTouchStart(event){
     if (event.targetTouches[0].pageX < 12) {

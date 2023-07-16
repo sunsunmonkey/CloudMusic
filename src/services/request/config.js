@@ -1,2 +1,2 @@
-export const BASE_URL = "https://api.hanling.space/"
+export const BASE_URL = "http://localhost:3000/"
 export const TIMEOUT = 10000

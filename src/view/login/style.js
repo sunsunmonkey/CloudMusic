@@ -1,7 +1,18 @@
 import styled from "styled-components";
 
 export const LoginWrapper = styled.div`
-    margin-top: 30vw;
+
+    .exit{
+        display: flex;
+        flex-direction: row-reverse;
+        .cha{
+        width: 5vw;
+        margin: 2vw 2vw;
+        }     
+    }
+    .main{
+        margin-top: 30vw;
+    }
     .title{
         font-size: 8vw;
         display: flex;
@@ -24,5 +35,6 @@ export const LoginWrapper = styled.div`
     a{
         color: #2C71C2;
     }
+    
    }
 `
