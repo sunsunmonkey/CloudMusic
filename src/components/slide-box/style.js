@@ -21,7 +21,6 @@ export const SlideBoxWrapper = styled.div`
         z-index: 9;
         background-color: rgb(245,245,245);
         width:100vw ;
-        /* transform: translateX(-50vw) */
         margin-left: -100vw;
     }
 `
