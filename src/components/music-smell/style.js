@@ -8,6 +8,9 @@ export const MusicSmellWrapper = styled.div`
    width: 26.5vw;
    box-sizing: border-box;
    padding: 1.5vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
    .top{
       .desc{
          color: #B5B1B9;
@@ -20,6 +23,7 @@ export const MusicSmellWrapper = styled.div`
       
    }
    .bottom{
+      margin-bottom: .5vw;
       .bottom-desc{
          font-size: 3px;
          color:#CFD0D4

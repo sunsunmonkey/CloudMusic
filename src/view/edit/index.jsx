@@ -1,10 +1,14 @@
 import React, { memo } from 'react'
 import {EditWrapper} from "./style"
 
+import ContentList from './c-cpns/content-list'
+import HeaderSection from './c-cpns/header-section'
+
 const Edit = memo((props) => {
   return (
     <EditWrapper>
-      <h1>1111</h1>
+      <HeaderSection></HeaderSection>
+      <ContentList></ContentList>
     </EditWrapper>
   )
 })

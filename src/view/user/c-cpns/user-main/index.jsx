@@ -1,6 +1,7 @@
 import React, { memo } from 'react'
 import {UserMainWrapper} from "./style"
 import MusicSmell from '../../../../components/music-smell'
+import AlbumList from '../../../../components/album-list'
 
 const UserMain = memo((props) => {
   return (
@@ -12,8 +13,9 @@ const UserMain = memo((props) => {
         <MusicSmell></MusicSmell>
         <MusicSmell></MusicSmell>
         </div>
-    
       </div>
+      <AlbumList/>
+      <AlbumList/>
     </UserMainWrapper>
   )
 })

@@ -4,7 +4,7 @@ export const UserAvatorWrapper = styled.div`
    .bc{
     background: url( ${userBackGround} )  no-repeat;
     background-size: cover;
-        height: 40vh;
+        height: 35vh;
         .main{
             padding: 2vw;
             box-sizing: border-box;

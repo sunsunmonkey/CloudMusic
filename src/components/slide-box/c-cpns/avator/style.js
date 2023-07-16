@@ -6,6 +6,7 @@ export const AvatorWrapper = styled.div`
    justify-content: center;
    .content{
       position: relative;
+      top: 1vw;
       z-index: 19;
       width: 72vw ;
       height: 10vw;

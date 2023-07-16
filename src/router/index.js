@@ -5,10 +5,11 @@ const Home = React.lazy(()=>import("../view/home"))
 const Edit= React.lazy(()=>import('../view/edit'))
 const User = React.lazy(()=>import('../view/user'))
 const Login = React.lazy(()=>import('../view/login'))
+const Album =  React.lazy(()=>import('../view/album-content'))
 const routes = [
     {
         path:"/",
-        element:<Navigate to="/user"></Navigate>
+        element:<Navigate to="/edit"></Navigate>
     },
     {   
         path:"/home",
@@ -23,6 +24,9 @@ const routes = [
     } , {
         path:"/login",
         element:<Login></Login>
+    } , {
+        path:"/album/:id",
+        element:<Album></Album>
     } 
 ]
 
