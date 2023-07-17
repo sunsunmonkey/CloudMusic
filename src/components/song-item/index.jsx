@@ -2,20 +2,19 @@ import React, { memo } from 'react'
 import {SongItemWrapper} from "./style"
 import moreLightGrey from '../../assets/images/moreLightGrey.png'
 import { handleAr } from '../../utils/handleAr'
-const SongItem = memo(({data,index}) => {
-    const {name, ar  ,playIndex, handleClick} =data
-    console.log(ar)
+const SongItem = memo(({data,index, handleClick,playIndex}) => {
+    const {name, ar  } =data
 
 
   return (
-    <SongItemWrapper onClick={handleClick}>
+    <SongItemWrapper onClick={()=>{handleClick()}}>
         
         <div className="left">
         <div className="num">
             {index+1}
         </div>
         <div className="center">
-            <div className={"title "+playIndex===index?"active":""}>{name}</div>
+            <div className={"title "+(playIndex===index?"active":"")}>{name}</div>
             <div className="artist">{handleAr(ar)}</div>
         </div>
         </div>

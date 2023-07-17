@@ -14,7 +14,7 @@ export const SongItemWrapper = styled.div`
     align-items: center;
     .num{
     width: 5vw;
-    margin-right: 2.5vw;
+    margin-right: 3.5vw;
     text-align: center;
     color: rgb(222,222,222);
    }

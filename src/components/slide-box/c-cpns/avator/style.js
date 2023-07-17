@@ -15,26 +15,26 @@ export const AvatorWrapper = styled.div`
       .avator_contain{
          display: flex;
          justify-content: space-between;
-         width: 18vw;
+         width: 20vw;
          .avator{
             display: flex;
             align-items: center;
    
               img{
                border-radius: 50%;
-               width: 5vw;
+               width: 6vw;
               } 
          }
          .img_item{
             display: flex;
             align-items: center;
                img{
-                  width: 3vw;
+                  width: 4vw;
                }
          }
          .name{
             line-height: 10vw;
-            font-size: 2.5vw;
+            font-size: 3vw;
          }
       }
       .code{

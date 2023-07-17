@@ -16,8 +16,6 @@ const ListSection = memo((props) => {
   },[id])
 
 
-
-  console.log(sonList)
   return (
     <ListSectionWrapper>
       <div className="play-all">

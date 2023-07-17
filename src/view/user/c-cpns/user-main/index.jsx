@@ -2,11 +2,22 @@ import React, { memo } from 'react'
 import {UserMainWrapper} from "./style"
 import MusicSmell from '../../../../components/music-smell'
 import AlbumList from '../../../../components/album-list'
+import { shallowEqual,  useSelector } from 'react-redux'
+
 
 
 
 const UserMain = memo((props) => {
-  const { userId ,  playlist} = props;
+
+  const { userId , playlist} = useSelector((state)=>({
+    userId:state.selfInfo.baseInfo.userId,
+    playlist:state.album.data.playlist
+  }),shallowEqual)
+
+
+
+
+
   const myList = playlist?.filter((item)=>{
         return item.creator.userId ===  userId 
     })

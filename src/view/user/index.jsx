@@ -13,9 +13,8 @@ import { loginToken } from '../../utils/loginToken'
 const User = memo((props) => {
   const dispatch = useDispatch()
 
-  const { userId , playlist} = useSelector((state)=>({
+  const { userId} = useSelector((state)=>({
     userId:state.selfInfo.baseInfo.userId,
-    playlist:state.album.data.playlist
   }),shallowEqual)
 
   const cookie = loginToken()
@@ -29,7 +28,7 @@ const User = memo((props) => {
     <UserWrapper>
       <UserAvator></UserAvator>
       <UserTab></UserTab>
-      <UserMain userId={userId} playlist={playlist}></UserMain>
+      <UserMain ></UserMain>
     </UserWrapper>
   )
 })

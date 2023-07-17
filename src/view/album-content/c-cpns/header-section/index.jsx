@@ -67,8 +67,8 @@ const HeaderSection = memo((props) => {
         <div className="button-list">
       
       
-        {buttonCount?.map(item=>{
-          return  <AlbumButton count={handleNumber( item)}></AlbumButton>
+        {buttonCount?.map((item,index)=>{
+          return  <AlbumButton count={handleNumber( item)} key={index}></AlbumButton>
         })}
         </div>
       </div>

@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const UserTabWrapper = styled.div`
     width: 90vw;
-    margin: 3vw auto;
+    margin: 2vw auto;
+    margin-bottom: 4vw;
   .tab-list{
    width: 55vw;
    margin: 0 auto;

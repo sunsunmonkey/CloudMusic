@@ -17,7 +17,9 @@ const selfInfoSlice = createSlice({
         baseInfo:{
             nickname:"未登录",
         },
-        detailInfo:{}
+        detailInfo:{
+             profile:{} 
+        }
      },
      reducers:{
         changeSelfInfoAction(state,{payload}){

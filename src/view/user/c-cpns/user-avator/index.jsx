@@ -1,11 +1,23 @@
 import React, { memo } from 'react'
 import {UserAvatorWrapper} from "./style"
 
-import userimg from '../../../../assets/images/userimg.png'
+
 import leftArrow from '../../../../assets/images/leftArrow2.png'
 import more from '../../../../assets/images/more.png'
 import { useNavigate } from 'react-router-dom'
+import { shallowEqual, useSelector } from 'react-redux'
+
 const UserAvator = memo((props) => {
+
+  const { detailInfo } = useSelector((state)=>({
+      detailInfo : state.selfInfo.detailInfo
+  }),shallowEqual)
+
+
+    const {level,createDays} = detailInfo
+    const {avatarUrl,nickname,followeds,follows  } = detailInfo.profile
+
+
   const navigate =useNavigate()
   return (
     <UserAvatorWrapper>
@@ -24,14 +36,38 @@ const UserAvator = memo((props) => {
       </div>
       <div className="avator-card">
         <div className="avator-img">
-          <img src={userimg} alt="" />
+          <img src={avatarUrl} alt="" />
         </div>
         <div className="name">
-          未登录
+          {nickname} 
         </div>
-        <div className="static"></div>
-        <div className="label"></div>
-        <div className="edit"></div>
+        <div className="static">
+        <div className="container">
+        <div className="sub">
+            {follows} 关注
+          </div>
+          <div className="fans">
+             {followeds}  粉丝
+          </div>
+           <div className="level">
+            Lv.{level}
+           </div>
+            </div>
+      
+        </div>
+        <div className="label">
+  
+          <div className="item">IP:重庆</div>
+          <div className="item">20后 天秤座</div>
+          <div className="item">山西 太原</div>
+          <div className="item">村龄{createDays}天</div>
+        </div>
+        <div className="edit" onClick={()=>{navigate('/edit')}}>
+          <div className="wrapper">
+          编辑资料
+          </div>
+
+        </div>
       </div>
     </UserAvatorWrapper>
   )

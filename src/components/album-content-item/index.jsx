@@ -3,7 +3,6 @@ import {AlbumContentItemWrapper} from "./style"
 import Tag from '../tag'
 import jia from '../../assets/images/jia.png'
 const AlbumContentItem = memo((props) => {
-    console.log(props.albumContentItem)
     const {name,coverImgUrl,tags,creator}= props.albumContentItem
 
 
