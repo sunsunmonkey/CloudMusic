@@ -2,8 +2,6 @@ import ZzkRequest from "../index";
 
 export async function login(setSrc,navigate){
     let timer
-    const cookie = localStorage.getItem('cookie')
-    getLoginStatus(cookie)
 
     const res = await ZzkRequest.get({
         url: `/login/qr/key?timestamp=${Date.now()}`,
@@ -23,10 +21,11 @@ export async function login(setSrc,navigate){
           // 这一步会返回cookie
           clearInterval(timer)
           navigate('/home')
-          await getLoginStatus(statusRes.cookie)
           localStorage.setItem('cookie', statusRes.cookie)
         }
       }, 3000)
+
+      return timer
 }
 
 async function checkStatus(key){
@@ -34,22 +33,20 @@ async function checkStatus(key){
     return res
 }
 
-async function getLoginStatus(cookie = ''){
+export async function getLoginStatus(cookie = ''){
     const res =await  ZzkRequest.post({
         url: `/login/status?timestamp=${Date.now()}`,
         data: {
           cookie,
         },
       })
-    return res
-}
+      const { userId, avatarUrl, nickname, province , city}= res.data.profile
+   return { 
+            userId, 
+            avatarUrl, 
+            nickname, 
+            province, 
+            city
+          }
+  }
 
-
-export async function selfInfo(cookie){
-    const res =await  ZzkRequest.post({
-        url: `/login/status?cookie=${cookie}`,
-      })
-      localStorage.setItem('id',res.data.account.id)
-      console.log(res)
-    return res
-}

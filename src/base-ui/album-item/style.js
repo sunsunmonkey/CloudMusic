@@ -19,7 +19,10 @@ export const AlbumItemWrapper = styled.div`
         margin-left: 2vw;
         .title{
             font-size: 3.6vw;
-
+            width: 65vw;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         .desc{
             margin-top: .3vw;
@@ -27,4 +30,11 @@ export const AlbumItemWrapper = styled.div`
             color: rgb(142,142,142);
         }
     }   
+    .more{
+        display: flex;
+        align-items: center;
+        img{
+            width: 4.7vw;
+        }
+    }
 `

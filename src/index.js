@@ -8,7 +8,7 @@ import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+ <React.StrictMode>
     <Provider store={store}>
       <Suspense fallback="loading">
         <HashRouter>
@@ -16,6 +16,6 @@ root.render(
         </HashRouter>
       </Suspense>
     </Provider>
-  </React.StrictMode>
+ </React.StrictMode>
 );
 

@@ -5,8 +5,15 @@ import code from '../../../../assets/images/code.png'
 import userimg from '../../../../assets/images/userimg.png'
 import { useNavigate } from 'react-router-dom'
 import { loginToken } from '../../../../utils/loginToken'
+import { useSelector ,  shallowEqual} from 'react-redux'
 const Avator = memo((props) => {
   const  navigate= useNavigate()
+
+   const { avatorUrl , nickname} =  useSelector(state=>({
+    avatorUrl: state.selfInfo.baseInfo.avatorUrl,
+    nickname: state.selfInfo.baseInfo.nickname
+   }),shallowEqual)
+  
   const token = loginToken()
   return (
     <AvatorWrapper>
@@ -22,13 +29,13 @@ const Avator = memo((props) => {
         <div className="avator">
             <img src={userimg} alt="" />
           </div>
-          <div className="name">未登录</div>
+          <div className="name">{nickname}</div>
           <div className="img_item">
           <img src= {rightArrow} alt="" />
           </div>
         </div>
         <div className="code">
-          <img src={code} alt="" />
+          <img src={!token? code : avatorUrl } alt="" />
         </div>
       </div>
     </AvatorWrapper>

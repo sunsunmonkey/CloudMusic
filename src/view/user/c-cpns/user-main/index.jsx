@@ -3,7 +3,15 @@ import {UserMainWrapper} from "./style"
 import MusicSmell from '../../../../components/music-smell'
 import AlbumList from '../../../../components/album-list'
 
+
+
 const UserMain = memo((props) => {
+  const { userId ,  playlist} = props;
+  const myList = playlist?.filter((item)=>{
+        return item.creator.userId ===  userId 
+    })
+  const otherList =  playlist?.slice(myList.length)
+
   return (
     <UserMainWrapper>
       <div className="music-smell-list">
@@ -14,8 +22,8 @@ const UserMain = memo((props) => {
         <MusicSmell></MusicSmell>
         </div>
       </div>
-      <AlbumList/>
-      <AlbumList/>
+      <AlbumList list={myList} title={"创建的歌单"}/>
+      <AlbumList list={otherList} title={"收藏的歌单"}/>
     </UserMainWrapper>
   )
 })

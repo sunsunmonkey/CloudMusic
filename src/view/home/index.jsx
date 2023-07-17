@@ -5,21 +5,25 @@ import { HomeWrapper } from "./style"
 import React from "react"
 import { pxTransferVW, vwTransferPX } from "../../utils/pxAndVW"
 import { loginToken } from "../../utils/loginToken"
-import { selfInfo } from "../../services/modules/login"
+import { fetchSelfInfo } from "../../store/modules/self-info"
+import { useDispatch } from "react-redux"
+
 
 function Home() {
+
+  const dispatch = useDispatch()
+  const cookie = loginToken()
+
+  useEffect(()=>{
+    if(cookie)  dispatch(fetchSelfInfo())
+  },[dispatch,cookie])
 
   const [ distance , setDistance] = useState(0)
   const [ isShow ,  setIsShow ] = useState(false)
   const [transition , setTransition] = useState('none')
   const positonStart = useRef(0)
   const positonEnd = useRef(0)
-  const cookie = loginToken()
-  useEffect(()=>{
-     selfInfo(cookie)
-  
-  
-  },[cookie])
+
 
   function handleTouchStart(event){
     if (event.targetTouches[0].pageX < 12) {

@@ -7,7 +7,13 @@ const Login = memo((props) => {
     const [src,setSrc] = useState(' ')
     const navigate = useNavigate()
     useEffect(()=>{
-      login(setSrc,navigate)
+      const timer = login(setSrc,navigate)
+
+      return ()=>{
+        timer.then(res=>{
+          clearInterval(res)
+        })
+      }
     },[navigate])
 
 

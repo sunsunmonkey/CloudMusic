@@ -1,16 +1,27 @@
 import React, { memo } from 'react'
 import {AlbumItemWrapper} from "./style"
-import userBackGround from '../../assets/images/userBackGround.jpg'
-
+import more from '../../assets/images/more_album.png'
+import { useNavigate } from 'react-router-dom'
 const AlbumItem = memo((props) => {
+  const {coverImgUrl,trackCount,name ,id} = props
+  const navigate =useNavigate()
+
+    function  handleClick(){
+      navigate(`/album/${id}`)
+    }
+
+
   return (
-    <AlbumItemWrapper>
-      <div className="left"><img src={userBackGround} alt="" /></div>
+    <AlbumItemWrapper onClick={handleClick}>
+      <div className="left"><img src={coverImgUrl} alt="" /></div>
       <div className="right">
         <div className="title">
-          我的歌单          
+         {name}            
         </div>
-        <div className="desc">12首</div>
+        <div className="desc">{trackCount}首</div>
+      </div>
+      <div className="more">
+        <img src={more} alt="" srcset="" />
       </div>
     </AlbumItemWrapper>
   )
