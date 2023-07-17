@@ -15,7 +15,7 @@ export const AvatorWrapper = styled.div`
       .avator_contain{
          display: flex;
          justify-content: space-between;
-         width: 26vw;
+         width: 18vw;
          .avator{
             display: flex;
             align-items: center;

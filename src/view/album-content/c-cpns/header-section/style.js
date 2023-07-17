@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import userBackGround from '../../../../assets/images/userBackGround.jpg'
 export const HeaderSectionWrapper = styled.div`
    .top{
     position: fixed;
     z-index: 999;
 
     width: 95vw;
-    margin:2vw auto ;
+    margin:3vw auto ;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -49,7 +48,7 @@ export const HeaderSectionWrapper = styled.div`
         top: 0;
         bottom: 0;
         margin: 0;
-        background: url(${userBackGround}) no-repeat; 
+        background: url(${props=>props.coverImgUrl}) no-repeat; 
         z-index: -9;
         filter: blur(4vw);
     }
@@ -64,7 +63,7 @@ export const HeaderSectionWrapper = styled.div`
         top: 0;
         bottom: 0;
         margin: 0;
-        background: url(${userBackGround}) no-repeat; 
+        background: url(${props=>props.coverImgUrl}) no-repeat; 
         z-index: -9;
         filter: blur(4vw);
     }

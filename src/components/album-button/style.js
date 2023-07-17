@@ -6,11 +6,11 @@ export const AlbumButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     padding: 2.4vw 0;
-    border-radius: 5vw;
+    border-radius: 50px;
    .button{
-    width: 16vw;
+    width: 20vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     font-size: 2vw;
     font-weight: 600;

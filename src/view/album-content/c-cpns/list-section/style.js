@@ -3,10 +3,12 @@ import styled from "styled-components";
 export const ListSectionWrapper = styled.div`
     background-color: white;
     border-radius: 3vw;
+ 
    .play-all{
     width: 95vw;
     margin: 0 auto;
     padding:3vw ;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     .desc{
@@ -27,5 +29,12 @@ export const ListSectionWrapper = styled.div`
         }
     }
  
+   }
+   .song-list{
+    height: 100vh;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+    display: none;
+    }
    }
 `

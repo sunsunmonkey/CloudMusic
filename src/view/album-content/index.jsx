@@ -15,10 +15,10 @@ const AlbumContent = memo((props) => {
         setAlbumDetail(res)
       })
     },[id]) 
-    console.log(albumDetail)
+
   return (
     <AlbumContentWrapper>
-      <HeaderSection></HeaderSection>
+      <HeaderSection albumDetail={albumDetail}></HeaderSection>
       <ListSection></ListSection>
     </AlbumContentWrapper>
   )

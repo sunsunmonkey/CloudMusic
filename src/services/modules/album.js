@@ -7,3 +7,7 @@ export function getAlbum(uid){
 export function getAlbumDetail(id){
     return ZzkRequest.get({url:`/playlist/detail?id=${id}`})
 }
+
+export function gatAllSong(id){
+    return ZzkRequest.get({url:`/playlist/track/all?id=${id}&limit=1000`})
+}

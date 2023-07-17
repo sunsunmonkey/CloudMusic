@@ -4,6 +4,7 @@ export const SongItemWrapper = styled.div`
     display: flex;
     align-items: center;
     width: 95vw;
+    box-sizing: border-box;
     margin: 0 auto;
     margin-bottom: 4vw;
     height: 10vw;
@@ -25,7 +26,14 @@ export const SongItemWrapper = styled.div`
     .title{
         font-size: 3.7vw;
     }
+    .active{
+        color: red;
+    }
     .artist{
+        width: 80vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin-top: .5vw;
         font-size: 2.5vw;
         color: rgb(184 183 183);

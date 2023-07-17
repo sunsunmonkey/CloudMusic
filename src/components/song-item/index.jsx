@@ -1,17 +1,22 @@
 import React, { memo } from 'react'
 import {SongItemWrapper} from "./style"
 import moreLightGrey from '../../assets/images/moreLightGrey.png'
-const SongItem = memo((props) => {
+import { handleAr } from '../../utils/handleAr'
+const SongItem = memo(({data,index}) => {
+    const {name, ar  ,playIndex, handleClick} =data
+    console.log(ar)
+
+
   return (
-    <SongItemWrapper>
+    <SongItemWrapper onClick={handleClick}>
         
         <div className="left">
         <div className="num">
-            1
+            {index+1}
         </div>
         <div className="center">
-            <div className="title">路由表子路由</div>
-            <div className="artist">路由表子路由路由表子路由路由表子路由</div>
+            <div className={"title "+playIndex===index?"active":""}>{name}</div>
+            <div className="artist">{handleAr(ar)}</div>
         </div>
         </div>
         
