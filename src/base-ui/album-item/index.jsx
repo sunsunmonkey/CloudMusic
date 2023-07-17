@@ -21,7 +21,7 @@ const AlbumItem = memo((props) => {
         <div className="desc">{trackCount}首</div>
       </div>
       <div className="more">
-        <img src={more} alt="" srcset="" />
+        <img src={more} alt="" />
       </div>
     </AlbumItemWrapper>
   )

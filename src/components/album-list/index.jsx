@@ -16,7 +16,6 @@ const AlbumList = memo((props) => {
           list?.map(item=>{
             const {coverImgUrl,trackCount,name, id
             } = item
-            console.log(item.id)
             return  <AlbumItem 
             key = {id}
             id = {id}

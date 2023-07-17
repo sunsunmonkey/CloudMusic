@@ -3,9 +3,7 @@ import { getAlbum } from "../../services/modules/album";
 
 
 export const fetchalbum = createAsyncThunk("fetchSelfInfo", (payload, { dispatch }) => {
-    console.log(payload)
     getAlbum(payload).then((res)=>{
-        console.log(res)
         dispatch(changeAlbumAction(res))
     })
 
