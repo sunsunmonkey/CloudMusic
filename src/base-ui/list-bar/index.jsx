@@ -1,6 +1,5 @@
 import React, { memo } from 'react'
 import { ListBarWrapper } from "./style"
-import code from '../../assets/images/code.png'
 import rightArrow from '../../assets/images/rightArrow.png'
 const ListBar = memo(({message}) => {
     return (
@@ -11,9 +10,9 @@ const ListBar = memo(({message}) => {
                         <div className="item" key={item}>
                             <div className="left">
                                 <div className="img_item">
-                                    <img src={code} alt="" />
+                                    <img src={[item[1]]} alt="" />
                                 </div>
-                                <div className="desc">{item}</div>
+                                <div className="desc">{item[0]}</div>
                             </div>
                             <div className="right">
                             <div className="img_item">

@@ -8,4 +8,12 @@ export const AllListBarWrapper = styled.div`
    &::-webkit-scrollbar {
    display: none;
    }
+   .black{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5vw;
+      img{
+         width: 72vw;
+      }
+   }
 `

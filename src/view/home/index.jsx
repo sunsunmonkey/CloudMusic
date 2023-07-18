@@ -27,7 +27,6 @@ function Home() {
 
 
   function handleTouchStart(event){
-    console.log(isOut)
     if (event.targetTouches[0].pageX < 12 || isShow ) {
       setIsShow(true)
       positonStart.current = event.targetTouches[0].pageX
@@ -35,7 +34,7 @@ function Home() {
 
   
   }
-  
+
   function handleTouchMove(event){
 
     if( pxTransferVW(distance)>81 ) return
