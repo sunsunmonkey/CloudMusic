@@ -28,9 +28,9 @@ const UserMain = memo((props) => {
       <div className="music-smell-list">
         <h4>音乐品味</h4>
         <div className="music-smell">
-        <MusicSmell></MusicSmell>
-        <MusicSmell></MusicSmell>
-        <MusicSmell></MusicSmell>
+        <MusicSmell  color="rgb(253,241,241)" top="我的喜欢" center="105首" bottom="听歌排行榜"></MusicSmell>
+        <MusicSmell color="rgb(253,246,231)" top="累计听歌" center="4357首" bottom="听歌排行"></MusicSmell>
+        <MusicSmell  color="rgb(233,240,249)" top="本周关键词" center="住在云村" bottom="黑胶时光机"></MusicSmell>
         </div>
       </div>
       <AlbumList list={myList} title={"创建的歌单"}/>

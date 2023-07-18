@@ -31,7 +31,7 @@ export const ListSectionWrapper = styled.div`
  
    }
    .song-list{
-    height: 100vh;
+    max-height: 100vh;
     overflow: scroll;
     &::-webkit-scrollbar {
     display: none;

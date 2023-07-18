@@ -3,7 +3,7 @@ import { ListBarWrapper } from "./style"
 import code from '../../assets/images/code.png'
 import rightArrow from '../../assets/images/rightArrow.png'
 const ListBar = memo((props) => {
-    const message = ['我的音乐', "云被中兴", "创作中心",'sss']
+    const message = ['我的音乐', "云被中兴", "创作中心",'我的']
     return (
         <ListBarWrapper>
             {

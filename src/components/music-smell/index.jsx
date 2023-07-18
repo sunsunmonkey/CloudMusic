@@ -1,18 +1,19 @@
 import React, { memo } from 'react'
 import {MusicSmellWrapper} from "./style"
 
-const MusicSmell = memo((props) => {
+const MusicSmell = memo(({color,top,center,bottom}) => {
+  
   return (
-    <MusicSmellWrapper>
+    <MusicSmellWrapper color={color}>
       <div className="top">
-        <div className="desc">我的喜欢</div>
-        <div className="number">105首</div>
+        <div className="desc">{top}</div>
+        <div className="number">{center}</div>
       </div>
       <div className="bottom">
           <div className="img">
             <img src="" alt="" />
           </div>
-          <div className="bottom-desc">喜欢的音乐</div>
+          <div className="bottom-desc">{bottom}</div>
         </div>
     </MusicSmellWrapper>
   )

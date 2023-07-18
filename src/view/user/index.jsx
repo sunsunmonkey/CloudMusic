@@ -1,7 +1,6 @@
-import React, { memo } from 'react'
+import React, { Suspense, memo } from 'react'
 import {UserWrapper} from "./style"
 import UserAvator from './c-cpns/user-avator'
-import UserMain from './c-cpns/user-main'
 import UserTab from './c-cpns/user-tab'
 import { shallowEqual, useSelector } from 'react-redux'
 import { useEffect } from 'react'
@@ -9,6 +8,7 @@ import { useDispatch } from 'react-redux'
 import { fetchalbum } from '../../store/modules/album'
 import { fetchSelfInfo } from '../../store/modules/self-info'
 import { loginToken } from '../../utils/loginToken'
+import { Outlet } from 'react-router-dom'
 
 const User = memo((props) => {
   const dispatch = useDispatch()
@@ -28,7 +28,9 @@ const User = memo((props) => {
     <UserWrapper>
       <UserAvator></UserAvator>
       <UserTab></UserTab>
-      <UserMain ></UserMain>
+      <Suspense fallback="loading">
+      <Outlet></Outlet>
+      </Suspense>
     </UserWrapper>
   )
 })

@@ -1,9 +1,11 @@
 import React, { memo, useState } from 'react'
 import {UserTabWrapper} from "./style"
+import { useNavigate } from 'react-router-dom'
 
 const UserTab = memo((props) => {
   const [selectIndex,setSelectIndex]= useState(0)
   const itemList = ["主页","动态","博客"]
+  const navigate = useNavigate()
   return (
     <UserTabWrapper>
       <div className="tab-list">
@@ -11,7 +13,12 @@ const UserTab = memo((props) => {
           itemList.map((item,index)=>{
             return(
               <div 
-              onClick={()=>setSelectIndex(index)}
+              onClick={()=>{
+                setSelectIndex(index)
+                if(index === 1){
+                  navigate('/user/moment')
+                }
+              }}
               className={"item "+ (index===selectIndex?"active": "")} 
               key={item}>
                 {item}

@@ -20,6 +20,9 @@ export const EditItemWrapper = styled.div`
         img{
             width: 5vw;
         }
+        span{
+            color:rgb(210 206 206) ;
+        }
     }
     .left{
         font-size: 3.5vw;

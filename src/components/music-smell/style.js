@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const MusicSmellWrapper = styled.div`
    height: 27vw;
-   background-image:linear-gradient(to bottom,rgb(253,241,241),white) ;
-   border: 1.5px solid rgb(253,241,241);
+   background-image:linear-gradient(to bottom,${props=>props.color},white) ;
+   border: 1.5px solid ${props=>props.color};
    border-radius: 2vw;
    width: 26.5vw;
    box-sizing: border-box;

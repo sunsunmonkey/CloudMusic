@@ -6,10 +6,13 @@ const Edit= React.lazy(()=>import('../view/edit'))
 const User = React.lazy(()=>import('../view/user'))
 const Login = React.lazy(()=>import('../view/login'))
 const Album =  React.lazy(()=>import('../view/album-content'))
+const UserMain = React.lazy(()=>import('../view/user/c-cpns/user-main'))
+const UserMoment = React.lazy(()=>import('../view/user/c-cpns/user-moment'))
+
 const routes = [
     {
         path:"/",
-        element:<Navigate to="/edit"></Navigate>
+        element:<Navigate to="/home"></Navigate>
     },
     {   
         path:"/home",
@@ -20,7 +23,17 @@ const routes = [
         element:<Edit></Edit>
     }, {
         path:"/user",
-        element:<User></User>
+        element:<User></User>,
+        children:[
+            {
+            path:"/user",
+            element:<UserMain></UserMain>,
+            },
+            {
+            path:"/user/moment",
+            element:<UserMoment></UserMoment>,   
+            }
+        ]
     } , {
         path:"/login",
         element:<Login></Login>

@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import userBackGround from '../../../../assets/images/userBackGround.jpg'
 export const UserAvatorWrapper = styled.div`
    .bc{
-    background: url( ${userBackGround} )  no-repeat;
+    background: url( ${props=>props.backgroundUrl} )  no-repeat;
     background-size: cover;
         height: 35vh;
         .main{
