@@ -16,6 +16,6 @@ root.render(
         </HashRouter>
       </Suspense>
     </Provider>
- </React.StrictMode>
+</React.StrictMode> 
 );
 

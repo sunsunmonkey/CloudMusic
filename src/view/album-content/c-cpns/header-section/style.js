@@ -11,10 +11,14 @@ export const HeaderSectionWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     .left{
-        width: 18vw;
         justify-content: space-between;
         display: flex;
         .title{
+            margin-left: 3vw;
+            width: 67vw;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             color: white;
             display: flex;
             align-items: center;
@@ -55,6 +59,7 @@ export const HeaderSectionWrapper = styled.div`
     }
    }
    .main{
+    height: 25vh;
     padding-top: 20vw;
     position: relative;
     >.cover{

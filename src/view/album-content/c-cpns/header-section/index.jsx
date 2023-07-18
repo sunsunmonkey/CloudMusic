@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom'
 import { handleNumber } from '../../../../utils/handleNumber'
 const HeaderSection = memo((props) => {
 
+  const {isTop} = props
   const navigate = useNavigate()
   let albumContentItem ={}
   let buttonCount =[]
@@ -41,7 +42,7 @@ const HeaderSection = memo((props) => {
       <div className="top">
         <div className="left">
         <div className="back" onClick={()=>navigate('/user')}><img src={leftArrow2} alt=""  /></div>
-        <div className="title">歌单</div>
+        <div className="title">{isTop? albumContentItem.name:"歌单"}</div>
         </div>
         <div className="right">
           <div className="search">
