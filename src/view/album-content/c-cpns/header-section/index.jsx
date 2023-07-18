@@ -15,7 +15,7 @@ const HeaderSection = memo((props) => {
   let buttonCount =[]
 
   if(props.albumDetail?.playlist) {
-    const {name,coverImgUrl,
+    const {name,coverImgUrl:coverimgurl,
       tags,description,
       commentCount,subscribedCount,
       shareCount
@@ -28,7 +28,7 @@ const HeaderSection = memo((props) => {
  
 
     albumContentItem={name,
-      coverImgUrl,tags,
+      coverimgurl,tags,
       description,
       creator:{
         avatarUrl,nickname
@@ -37,7 +37,7 @@ const HeaderSection = memo((props) => {
   }
 
   return (
-    <HeaderSectionWrapper coverImgUrl={albumContentItem.coverImgUrl}>
+    <HeaderSectionWrapper coverimgurl={albumContentItem.coverimgurl}>
       <div className="top">
         <div className="left">
         <div className="back" onClick={()=>navigate('/user')}><img src={leftArrow2} alt=""  /></div>

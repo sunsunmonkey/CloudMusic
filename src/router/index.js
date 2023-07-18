@@ -8,6 +8,8 @@ const Login = React.lazy(()=>import('../view/login'))
 const Album =  React.lazy(()=>import('../view/album-content'))
 const UserMain = React.lazy(()=>import('../view/user/c-cpns/user-main'))
 const UserMoment = React.lazy(()=>import('../view/user/c-cpns/user-moment'))
+const UserBlog = React.lazy(()=>import('../view/user/c-cpns/user-blog'))
+
 
 const routes = [
     {
@@ -32,6 +34,9 @@ const routes = [
             {
             path:"/user/moment",
             element:<UserMoment></UserMoment>,   
+            },{
+                path:"/user/blog",
+                element:<UserBlog></UserBlog>,     
             }
         ]
     } , {

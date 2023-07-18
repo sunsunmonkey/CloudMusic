@@ -5,7 +5,7 @@ export const ListBarWrapper = styled.div`
     width: 72vw;
     margin: 0 auto;
     border-radius: 2vw;
-    margin-top: 5vw;
+    margin-bottom: 5vw;
     .item{
         width: 70vw;
         margin: 0 auto;

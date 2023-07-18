@@ -3,14 +3,14 @@ import {AlbumContentItemWrapper} from "./style"
 import Tag from '../tag'
 import jia from '../../assets/images/jia.png'
 const AlbumContentItem = memo((props) => {
-    const {name,coverImgUrl,tags,creator}= props.albumContentItem
+    const {name,coverimgurl,tags,creator}= props.albumContentItem
 
 
   return (
     <AlbumContentItemWrapper >
     <div className="left">
         <div className="cover">
-            <img src={coverImgUrl} alt="" />
+            <img src={coverimgurl} alt="" />
         </div>
         <div className="num"></div>
     </div>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const UserAvatorWrapper = styled.div`
    .bc{
-    background: url( ${props=>props.backgroundUrl} )  no-repeat;
+    background: url( ${props=>props.backgroundurl} )  no-repeat;
     background-size: cover;
         height: 35vh;
         .main{

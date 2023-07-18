@@ -48,7 +48,7 @@ export const HeaderSectionWrapper = styled.div`
         top: 0;
         bottom: 0;
         margin: 0;
-        background: url(${props=>props.coverImgUrl}) no-repeat ; 
+        background: url(${props=>props.coverimgurl}) no-repeat ; 
         background-size: cover;
         z-index: -9;
         filter: blur(4vw);
@@ -64,7 +64,7 @@ export const HeaderSectionWrapper = styled.div`
         top: 0;
         bottom: 0;
         margin: 0;
-        background: url(${props=>props.coverImgUrl})  no-repeat ; 
+        background: url(${props=>props.coverimgurl})  no-repeat ; 
         background-size: cover;
         z-index: -9;
         filter: blur(4vw);

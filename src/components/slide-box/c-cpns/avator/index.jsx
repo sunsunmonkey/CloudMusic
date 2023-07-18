@@ -9,11 +9,12 @@ import { useSelector ,  shallowEqual} from 'react-redux'
 const Avator = memo((props) => {
   const  navigate= useNavigate()
 
-   const { avatorUrl , nickname} =  useSelector(state=>({
-    avatorUrl: state.selfInfo.baseInfo.avatorUrl,
+   const { avatarUrl , nickname} =  useSelector(state=>({
+    avatarUrl: state.selfInfo.baseInfo.avatarUrl,
     nickname: state.selfInfo.baseInfo.nickname
    }),shallowEqual)
   
+
   const token = loginToken()
   return (
     <AvatorWrapper>
@@ -27,7 +28,7 @@ const Avator = memo((props) => {
             
         }}>
         <div className="avator">
-            <img src={userimg} alt="" />
+            <img src={!token? userimg : avatarUrl } alt="" />
           </div>
           <div className="name">{nickname}</div>
           <div className="img_item">
@@ -35,7 +36,7 @@ const Avator = memo((props) => {
           </div>
         </div>
         <div className="code">
-          <img src={!token? code : avatorUrl } alt="" />
+          <img src={code} alt="" />
         </div>
       </div>
     </AvatorWrapper>

@@ -15,8 +15,12 @@ const UserTab = memo((props) => {
               <div 
               onClick={()=>{
                 setSelectIndex(index)
-                if(index === 1){
+                if(index ===0){
+                  navigate('/user')
+                }else if(index === 1){
                   navigate('/user/moment')
+                }else if(index === 2){
+                  navigate('/user/blog')
                 }
               }}
               className={"item "+ (index===selectIndex?"active": "")} 
