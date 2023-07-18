@@ -13,6 +13,18 @@ export const EditItemWrapper = styled.div`
     .right{
         color:rgb(156,156,156);
         font-size: 3.5vw;
+        .avator{
+            width: 10vw;
+            border-radius: 50%;
+        }
+        img{
+            width: 5vw;
+        }
+    }
+    .left{
+        font-size: 3.5vw;
+        display: flex;
+        align-items: center;
     }
    }
 `
