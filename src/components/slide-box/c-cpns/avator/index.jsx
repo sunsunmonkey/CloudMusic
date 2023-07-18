@@ -35,7 +35,15 @@ const Avator = memo((props) => {
           <img src= {rightArrow} alt="" />
           </div>
         </div>
-        <div className="code">
+        
+        <div className="code" onClick={()=>{
+          if(token){
+            navigate('/user')
+          }else{
+            navigate('/login')
+          }
+            
+        }}>
           <img src={code} alt="" />
         </div>
       </div>
