@@ -15,7 +15,11 @@ const UserAvator = memo((props) => {
 
 
     const {level,createDays} = detailInfo
-    const {avatarUrl,nickname,followeds,follows,backgroundUrl:backgroundurl  } = detailInfo.profile
+    
+
+  
+    const profile = detailInfo.profile || {}
+    const {avatarUrl,nickname,followeds,follows, backgroundUrl:backgroundurl  } = profile
 
 
   const navigate =useNavigate()

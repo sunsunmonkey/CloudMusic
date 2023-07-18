@@ -7,7 +7,7 @@ import AllListBar from './c-cpns/all-list-bar'
 const SliderBox= memo((props) => {
   const [mask , setMask] = useState('block')
   const { distance, transition ,sonCallback} = props
-
+  
   const transparency = (0.5/vwTransferPX(80))*distance
 
   if(distance > 0 && mask!=='block') setMask('block')

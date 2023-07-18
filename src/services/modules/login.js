@@ -13,7 +13,7 @@ export async function login(setSrc,navigate){
         setSrc(res2.data.qrimg)
       timer = setInterval(async () => {
         const statusRes = await checkStatus(key)
-        console.log(statusRes)
+        
         if (statusRes.code === 800) {
           alert('二维码已过期,请重新获取')
           clearInterval(timer)

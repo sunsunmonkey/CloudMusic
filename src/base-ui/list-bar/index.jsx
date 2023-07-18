@@ -2,12 +2,11 @@ import React, { memo } from 'react'
 import { ListBarWrapper } from "./style"
 import code from '../../assets/images/code.png'
 import rightArrow from '../../assets/images/rightArrow.png'
-const ListBar = memo((props) => {
-    const message = ['我的音乐', "云被中兴", "创作中心",'我的']
+const ListBar = memo(({message}) => {
     return (
         <ListBarWrapper>
             {
-                message.map((item) => {
+                message?.map((item) => {
                     return (
                         <div className="item" key={item}>
                             <div className="left">
