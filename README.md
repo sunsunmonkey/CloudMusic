@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# 网易云音乐移动版
+### 启动
+    使用前先启动服务，我是启动的本地3000端口，配置文件在services/request/config.js里，配置好后在终端输入命令 `npm start`即可启动
+### 基础功能
+- 基本实现了侧边栏的全部功能：
+    (单指抽拉，不过半的弹回，边界阈值的判断，点击蒙版的退回，以及相应的动画效果)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 个人主页大体内容
 
-## Available Scripts
+- 从个人主页的卡片按钮处进入信息编辑页 
 
-In the project directory, you can run:
+- 歌单页面及简单交互
+    (点击歌目变红，滚动条监听，及顶部标题变化)
 
-### `npm start`
+- 登录：使用的是二维码登录，在未登录状态下点击头像或二维码icon即可进入/login下
+        实现原理是使用一个简单的轮询，来判断是否登录成功
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 项目亮点
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 项目架构清晰分层明确
 
-### `npm test`
+- 使用redux管理一些网络请求的数据
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 组件的封装和复用，以及插槽的灵活使用
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 较为美观的样式

@@ -21,14 +21,16 @@ function Home() {
   const [ distance , setDistance] = useState(0)
   const [ isShow ,  setIsShow ] = useState(false)
   const [isOut ,setIsOut] = useState(false)
+  const [isClose,setIsClose] = useState(true)
   const [transition , setTransition] = useState('none')
   const positonStart = useRef(0)
   const positonEnd = useRef(0)
 
 
   function handleTouchStart(event){
-    if (event.targetTouches[0].pageX < 12 || isShow ) {
+    if (event.targetTouches[0].pageX < 12 || isOut) {
       setIsShow(true)
+      setIsClose(false)
       positonStart.current = event.targetTouches[0].pageX
     }
 
@@ -36,7 +38,7 @@ function Home() {
   }
 
   function handleTouchMove(event){
-
+    if(isClose) return
     if( pxTransferVW(distance)>81 ) return
     setTransition('none')
     positonEnd.current = event.targetTouches[0].pageX
@@ -67,6 +69,7 @@ function Home() {
       }else{
         setDistance(0)
         setIsOut(false)
+        setIsClose(true)
       }
     }
   }
@@ -74,6 +77,7 @@ function Home() {
     setTransition('all .3s')
     setDistance(0)
     setIsOut(false)
+    setIsClose(true)
   }
   return (
     <HomeWrapper  
