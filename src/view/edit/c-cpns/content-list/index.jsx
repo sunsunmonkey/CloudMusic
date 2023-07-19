@@ -23,7 +23,7 @@ const ContentList = memo((props) => {
   },[dispatch,userId,cookie])
 
 
-  const {profile} = useSelector((state)=>({
+  const {profile={}} = useSelector((state)=>({
     profile:state.selfInfo.detailInfo.profile
   }),shallowEqual)
   const {avatarUrl,nickname,gender,birthday  } = profile
