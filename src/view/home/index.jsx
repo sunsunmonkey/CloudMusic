@@ -28,7 +28,7 @@ function Home() {
 
 
   function handleTouchStart(event){
-    if (event.targetTouches[0].pageX < 12 || isOut) {
+    if (event.targetTouches[0].pageX < 15 || isOut) {
       setIsShow(true)
       setIsClose(false)
       positonStart.current = event.targetTouches[0].pageX

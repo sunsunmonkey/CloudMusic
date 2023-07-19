@@ -8,7 +8,7 @@ const HeaderSection = memo((props) => {
     <HeaderSectionWrapper>
       
       <div className="left">
-        <img src={arrowLeftBlack} alt=""  onClick={()=>{navigate('/home')}}/>
+        <img src={arrowLeftBlack} alt=""  onClick={()=>{navigate('/user')}}/>
          <div className="title">我的资料</div>
       </div>
 

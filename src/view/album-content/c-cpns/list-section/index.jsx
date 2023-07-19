@@ -23,7 +23,7 @@ const ListSection = memo((props) => {
           <img src={palyAll} alt="" />
         </div>
         <div className="desc">播放全部</div>
-        <div className="num">({sonList.length})</div>
+        <div className="num">({sonList?.length})</div>
       </div>
       <div className="song-list">
       {
