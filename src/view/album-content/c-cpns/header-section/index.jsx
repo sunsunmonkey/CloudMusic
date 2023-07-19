@@ -12,6 +12,7 @@ const HeaderSection = memo((props) => {
 
   const {isTop} = props
   const navigate = useNavigate()
+  const iconPath = ["./img/albumShare.png","./img/commend.png","./img/albumSub.png"]
   let albumContentItem ={}
   let buttonCount =[]
 
@@ -69,7 +70,7 @@ const HeaderSection = memo((props) => {
       
       
         {buttonCount?.map((item,index)=>{
-          return  <AlbumButton count={handleNumber( item)} key={index}></AlbumButton>
+          return  <AlbumButton count={handleNumber( item)} key={index} src={ iconPath[index]}></AlbumButton>
         })}
         </div>
       </div>
